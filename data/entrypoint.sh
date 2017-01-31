@@ -36,4 +36,6 @@ if ! [ -f /mnt/sync/sync.conf ]; then
     cp /etc/sync.conf.default /mnt/sync/sync.conf;
 fi
 
+chown -R $USER_NAME:$GROUP_NAME /mnt/sync
+
 exec su-exec $USER_NAME:$GROUP_NAME /usr/bin/rslsync --nodaemon --config "/mnt/sync/sync.conf"
