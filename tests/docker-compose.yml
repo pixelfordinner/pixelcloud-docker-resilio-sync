@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  server-resilio:
+    image: "pixelcloud/sync"
+    container_name: "vendor-app-resilio_sync"
+    restart: on-failure
+    volumes:
+      - "./volumes/sync:/mnt/sync"
+    ports:
+      - "55555:55555"
+      - "8888:8888"
