@@ -3,8 +3,8 @@ MAINTAINER Karl Fathi <karl@pixelfordinner.com>
 
 ENV LANG C.UTF-8
 
-ENV RESILIO_VERSION 2.4.4
-LABEL com.resilio.version="2.4.4"
+ENV RESILIO_VERSION stable
+LABEL com.resilio.version="stable"
 
 RUN apk add --no-cache \
   su-exec \
